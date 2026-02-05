@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,22 @@
 <body class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white font-sans">
 
   <!-- Header / Navbar -->
-  <header class="w-full">
+  <header class="w-full w-full sticky top-0 z-50 bg-gradient-to-br from-[#0b0033] to-[#4d0033] shadow-lg">
     <div class="container mx-auto flex items-center justify-between p-5">
       <!-- Logo -->
       <div class="text-2xl font-bold">
-        Alex <span class="text-pink-600">Stark</span>
+        Muhammad <span class="text-pink-600">Imran</span>
       </div>
 
       <!-- Navigation links -->
       <nav>
         <div class="hidden md:flex gap-8 items-center">
-          <a href="#" class="hover:text-pink-500 font-medium">Home</a>
-          <a href="#" class="hover:text-pink-500 font-medium">About</a>
-          <a href="#" class="hover:text-pink-500 font-medium">Service</a>
-          <a href="#" class="hover:text-pink-500 font-medium">Portfolio</a>
-          <a href="#" class="hover:text-pink-500 font-medium">Contact</a>
-          <a href="#" class="px-4 py-2 rounded-full border-2 border-pink-600 text-pink-600 font-medium hover:bg-pink-600 hover:text-white transition">Hire Me</a>
+          <a href="/" class="hover:text-pink-500 font-medium">Home</a>
+          <a href="#hero" class="hover:text-pink-500 font-medium">About</a>
+          <a href="#service" class="hover:text-pink-500 font-medium">Service</a>
+          <a href="#portfolio" class="hover:text-pink-500 font-medium">Portfolio</a>
+          <a href="#contact" class="hover:text-pink-500 font-medium">Contact</a>
+          <a href="#contact" class="px-4 py-2 rounded-full border-2 border-pink-600 text-pink-600 font-medium hover:bg-pink-600 hover:text-white transition">Hire Me</a>
         </div>
 
         <!-- Mobile Hamburger -->
@@ -41,21 +41,21 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#0b0033]">
       <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Home</a>
-      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">About</a>
-      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Service</a>
-      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Portfolio</a>
-      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Contact</a>
+      <a href="#hero" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">About</a>
+      <a href="#service" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Service</a>
+      <a href="#portfolio" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Portfolio</a>
+      <a href="#contact" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Contact</a>
       <a href="#" class="block px-5 py-3 border-t-2 border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white">Hire Me</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="flex flex-col-reverse md:flex-row items-center justify-between container mx-auto px-5 py-20 gap-10">
+  <section id="hero" class="flex flex-col-reverse md:flex-row items-center justify-between container mx-auto px-5 py-20 gap-10">
     <!-- Hero Text -->
     <div class="md:max-w-lg text-center md:text-left">
-      <p class="mb-3">Hello there, welcome to my site</p>
-      <h1 class="text-4xl md:text-5xl font-bold mb-3">I'm Alex Stark</h1>
-      <h1 class="text-3xl md:text-4xl font-semibold mb-6"><span class="text-pink-600">A Full Stack Developer</span> & UI/UX Designer</h1>
+      <p class="mb-3">Hello there, welcome to my Portfolio</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">I'm Muhammad Imran</h1>
+      <h1 class="text-3xl md:text-4xl font-semibold mb-6"><span class="text-pink-600">A Full Stack Wordpress Developer</span> & UI/UX Designer</h1>
       <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
         <a href="#" class="px-6 py-3 rounded-full bg-pink-600 text-white font-medium hover:opacity-80 transition">See Portfolio</a>
         <a href="#" class="px-6 py-3 rounded-full border-2 border-pink-600 text-pink-600 font-medium hover:bg-pink-600 hover:text-white transition">Contact Me</a>
@@ -67,7 +67,7 @@
       <img src="/assets/BG.png" alt="Alex Stark" class="rounded-xl w-80 md:w-96 mx-auto md:mx-0">
     </div>
   </section>
-<section class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white py-20">
+<section id="service" class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white py-20">
   <div class="container mx-auto px-5">
 
     <!-- What I Offer -->
@@ -229,7 +229,7 @@
 </section>
 
 
-<section class="bg-zinc-950 py-16 px-4 font-sans text-white">
+<section id="portfolio" class="bg-zinc-950 py-16 px-4 font-sans text-white">
   <div class="max-w-6xl mx-auto text-center">
     <p class="text-emerald-400 font-bold uppercase tracking-widest text-xs mb-2">Client IT Solution</p>
     <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Our Happy Clients</h2>
@@ -278,7 +278,7 @@
 
 
 <!-- Let's Work Together Section -->
-<section class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white py-20">
+<section id="contact" class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white py-20">
   <div class="container mx-auto px-5 text-center">
     <!-- Heading -->
     <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Work Together</h2>
