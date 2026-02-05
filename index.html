@@ -3,106 +3,337 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Hero Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white font-sans">
 
-  <!-- HERO SECTION -->
-  <header id="hero">
-    <div class="container">
-      <h1>Hello, I'm <span>Your Name</span></h1>
-      <p>I'm a Web Developer | Frontend & Backend</p>
-      <a href="#projects" class="btn">View My Work</a>
+  <!-- Header / Navbar -->
+  <header class="w-full">
+    <div class="container mx-auto flex items-center justify-between p-5">
+      <!-- Logo -->
+      <div class="text-2xl font-bold">
+        Alex <span class="text-pink-600">Stark</span>
+      </div>
+
+      <!-- Navigation links -->
+      <nav>
+        <div class="hidden md:flex gap-8 items-center">
+          <a href="#" class="hover:text-pink-500 font-medium">Home</a>
+          <a href="#" class="hover:text-pink-500 font-medium">About</a>
+          <a href="#" class="hover:text-pink-500 font-medium">Service</a>
+          <a href="#" class="hover:text-pink-500 font-medium">Portfolio</a>
+          <a href="#" class="hover:text-pink-500 font-medium">Contact</a>
+          <a href="#" class="px-4 py-2 rounded-full border-2 border-pink-600 text-pink-600 font-medium hover:bg-pink-600 hover:text-white transition">Hire Me</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0b0033]">
+      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Home</a>
+      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">About</a>
+      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Service</a>
+      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Portfolio</a>
+      <a href="#" class="block px-5 py-3 hover:bg-pink-600 hover:text-white">Contact</a>
+      <a href="#" class="block px-5 py-3 border-t-2 border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white">Hire Me</a>
     </div>
   </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Short description about your skills, experience, and goals.</p>
+  <!-- Hero Section -->
+  <section class="flex flex-col-reverse md:flex-row items-center justify-between container mx-auto px-5 py-20 gap-10">
+    <!-- Hero Text -->
+    <div class="md:max-w-lg text-center md:text-left">
+      <p class="mb-3">Hello there, welcome to my site</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">I'm Alex Stark</h1>
+      <h1 class="text-3xl md:text-4xl font-semibold mb-6"><span class="text-pink-600">A Full Stack Developer</span> & UI/UX Designer</h1>
+      <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+        <a href="#" class="px-6 py-3 rounded-full bg-pink-600 text-white font-medium hover:opacity-80 transition">See Portfolio</a>
+        <a href="#" class="px-6 py-3 rounded-full border-2 border-pink-600 text-pink-600 font-medium hover:bg-pink-600 hover:text-white transition">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="rounded-2xl p-1 bg-gradient-to-br from-pink-600 to-purple-700">
+      <img src="/assets/BG.png" alt="Alex Stark" class="rounded-xl w-80 md:w-96 mx-auto md:mx-0">
     </div>
   </section>
+<section class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white py-20">
+  <div class="container mx-auto px-5">
 
-  <!-- SKILLS SECTION -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skill-bars">
-        <div class="skill">
-          <h4>HTML</h4>
-          <div class="bar"><div class="fill" style="width:90%"></div></div>
+    <!-- What I Offer -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">What I Offer</h2>
+      <div class="w-24 h-1 bg-pink-600 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 text-black">
+      <!-- WordPress Development -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+        <div class="flex items-center mb-4 gap-2">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" color="var(--color-wordpress)" style="color:var(--color-wordpress)" height="40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"></path></svg>
+          <h3 class="text-xl font-bold">WordPress Development</h3>
         </div>
-        <div class="skill">
-          <h4>CSS</h4>
-          <div class="bar"><div class="fill" style="width:85%"></div></div>
+        <p class="mb-4 text-gray-700">Building and revamping WordPress websites that are fast, secure, and easy to manage.</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1">
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Custom Themes</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Plugin Development</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Performance Optimization</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">SEO-Friendly Design</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Payment Gateway Integration</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Secure Checkout</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Regular Updates</li>
+        </ul>
+      </div>
+
+      <!-- E-commerce Solutions -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+        <div class="flex items-center mb-4 gap-2">
+          <img src="assets/download (1).png" alt="E-commerce Icon" class="w-12 rounded-full">
+          <h3 class="text-xl font-bold">E-commerce Solutions</h3>
         </div>
-        <div class="skill">
-          <h4>JavaScript</h4>
-          <div class="bar"><div class="fill" style="width:80%"></div></div>
+        <p class="mb-4 text-gray-700">Transform your e-commerce store into a cutting-edge shopping experience.</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1">
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">WooCommerce</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Magento 2</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Shopify</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Next.js with Magento 2 Integration via API</li>
+        </ul>
+      </div>
+
+      <!-- Bug Fixing & Support -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/assets/bug1.jpeg" alt="Support Icon" class="w-12 mr-2 rounded-full">
+          <h3 class="text-xl font-bold">Bug Fixing & Support</h3>
+        </div>
+        <p class="mb-4 text-gray-700">I provide expert bug fixing and technical support to ensure your website or app runs smoothly.</p>
+        <ul class="list-disc list-inside text-gray-600 space-y-1">
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Bug Identification & Fixing</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Quick Turnaround</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Cross-Platform Compatibility</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Performance & Speed Optimization</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Ongoing Support</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">24/7 Support</li>
+          <li class="flex items-start before:content-['✓'] before:text-pink-600 before:mr-2">Quick Response Times</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- My Expertise -->
+    <div class="mt-20 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">My Expertise</h2>
+      <div class="w-24 h-1 bg-pink-600 mx-auto rounded-full mb-10"></div>
+
+      <div class="grid md:grid-cols-4 gap-8 text-left">
+        <!-- Expertise Item -->
+        <div>
+          <p class="mb-2 font-semibold">PHP Development</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 80%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2 font-semibold">Custom Theme Development</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2 font-semibold">Theme Customization</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2 font-semibold">WordPress</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 98%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2 font-semibold">JavaScript</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 92%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2 font-semibold">Elementor</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2 font-semibold">API Integration</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2 font-semibold">Tailwind CSS</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-2 font-semibold">Bootstrap</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 font-semibold">Figma</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 95%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 font-semibold">Full Stack Development</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 font-semibold">Divi</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 font-semibold">Gutenberg Editor</p>
+          <div class="w-full h-3 bg-gray-600 rounded-full">
+            <div class="h-3 bg-pink-600 rounded-full" style="width: 90%"></div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="projects/project1.png" alt="Project 1">
-          <h3>Project Title</h3>
-          <p>Short description</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <img src="projects/project2.png" alt="Project 2">
-          <h3>Project Title</h3>
-          <p>Short description</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIALS SECTION -->
-  <section id="testimonials">
-    <div class="container">
-      <h2>Testimonials</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>"Great work! Highly recommended."</p>
-          <h4>Client Name</h4>
-        </div>
-        <div class="testimonial-card">
-          <p>"Delivered on time and exceeded expectations."</p>
-          <h4>Client Name</h4>
+
+<section class="bg-zinc-950 py-16 px-4 font-sans text-white">
+  <div class="max-w-6xl mx-auto text-center">
+    <p class="text-emerald-400 font-bold uppercase tracking-widest text-xs mb-2">Client IT Solution</p>
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Our Happy Clients</h2>
+    <p class="text-gray-400 max-w-2xl mx-auto mb-12 text-sm leading-relaxed">
+      See how MountainTech has helped businesses, delivering the best people and technology unravelling complexity and bringing a sustainable competitive advantage.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <div class="relative group overflow-hidden rounded-lg aspect-[4/5]">
+        <img src="/assets/mclub-1.webp" alt="MO Chaudry" 
+             class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:blur-[2px] transition duration-700 ease-in-out">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 text-left">
+          <p class="text-gray-300 text-sm italic mb-4">"I appreciate the M Club website's exceptional work, showcasing facilities and services, facilitating seamless and engaging connections with our members. Thank you!"</p>
+          <h3 class="text-xl font-bold">MO Chaudry</h3>
+          <p class="text-emerald-500 text-sm font-semibold uppercase">mclub spa and fitness</p>
         </div>
       </div>
+
+      <div class="relative group overflow-hidden rounded-lg aspect-[4/5]">
+        <img src="/assets/2-2.webp" alt="Abid Hussain" 
+             class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:blur-[2px] transition duration-700 ease-in-out">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 text-left">
+          <p class="text-gray-300 text-sm italic mb-4">"Delighted with MountainTech's consistent delivery of high-quality work. Our website functions seamlessly, and the journey continues smoothly with their involvement."</p>
+          <h3 class="text-xl font-bold">Abid Hussain</h3>
+          <p class="text-emerald-500 text-sm font-semibold uppercase">step legal solicitors</p>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-lg aspect-[4/5]">
+        <img src="/assets/mw.webp" alt="Dr Nicola Brough" 
+             class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:blur-[2px] transition duration-700 ease-in-out">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 text-left">
+          <p class="text-gray-300 text-sm italic mb-4">"Having successfully launched the Measure Well Hub we look forward to continuing to work with MountainTech to evolve, enhance and develop to improve the service to our customers."</p>
+          <h3 class="text-xl font-bold">Dr Nicola Brough (PhD)</h3>
+          <p class="text-emerald-500 text-sm font-semibold uppercase">measure well</p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+
+<!-- Let's Work Together Section -->
+<section class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white py-20">
+  <div class="container mx-auto px-5 text-center">
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Let's Work Together</h2>
+
+    <!-- Divider -->
+    <div class="w-24 h-1 bg-gray-300 mx-auto mb-6 rounded-full"></div>
+
+    <!-- Subtext -->
+    <p class="text-gray-300 mb-8 max-w-xl mx-auto">
+      Ready to start your next project? I'm available for freelance work and always excited to collaborate on innovative ideas.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <!-- WhatsApp Button -->
+      <a href="#" class="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gray-600 text-white font-medium hover:opacity-90 transition shadow-lg">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.968-.273-.099-.472-.149-.671.15-.198.297-.768.968-.941 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.671-1.611-.92-2.21-.242-.579-.487-.5-.671-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+        WhatsApp Me
+      </a>
+
+      <!-- Fiverr Button -->
+      <a href="#" class="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-green-600 text-white font-medium hover:opacity-90 transition shadow-lg">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.968-.273-.099-.472-.149-.671.15-.198.297-.768.968-.941 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.521.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.074-.149-.671-1.611-.92-2.21-.242-.579-.487-.5-.671-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+        Hire on Fiverr
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-gradient-to-br from-[#0b0033] to-[#4d0033] text-white py-6">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-around px-4">
+    <p class="text-sm">&copy; 2026 Muhammad Imran. All rights reserved.</p>
+    <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="mt-2 md:mt-0 text-white hover:text-blue-500">
+      <!-- LinkedIn SVG Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.761 0-5 2.238-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.762-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.062-1.867-3.062-1.869 0-2.154 1.459-2.154 2.968v5.698h-3v-10h2.881v1.367h.041c.401-.759 1.379-1.558 2.841-1.558 3.038 0 3.602 2.001 3.602 4.604v5.587z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Your Name. All rights reserved.</p>
-  </footer>
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
 
-<script src="script.js"></script>
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
 </body>
 </html>
